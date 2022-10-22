@@ -1,0 +1,21 @@
+server:
+    port: "${PORT}"
+logging:
+    level:
+        web: DEBUG
+spring:
+    sql:
+        init:
+            platform: postgres
+    datasource:
+        url: "${DB_URL}"
+        username: ${DB_USER}
+        password: ${DB_PASSWORD}
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
